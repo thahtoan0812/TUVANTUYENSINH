@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500$display=swap');
+
+:root{
+    --color-main:#24252A;
+}
+
+* {
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type:  none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+    left: -100%;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+    left: 0;
+    width: 100%;
+    right: 0;
+}
+
+#sidebar-toggle:checked ~ .main-content {
+    margin-left: 0;
+}
+
+
+.sidebar{
+    width: 280px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--color-main);
+    color: #fff;
+    z-index: 20;
+    transition: left 300ms;
+}
+
+.sidebar-brand{
+    height: 50px;
+}
+
+.brand-flex{
+    display: flex;
+    justify-content: space-between;   
+    align-items: center; 
+}
+
+.brand-icons span{
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.main-content{
+    margin-left: 280px;
+    transition: margin-left 300ms;
+}
+
+.sidebar-user{
+    margin:0rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+.sidebar-user img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #efefef;
+}
+
+
+.sidebar-user h3{
+    font-size: 1.5rem;
+}
+
+.sidebar-user span{
+    font-size: 1rem;
+}
+
+.sidebar-menu{
+    margin-top: 3rem;
+}
+
+.menu-head {
+    text-transform: uppercase;
+    color: #0088a9;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: .8rem;
+    
+}
+
+.sidebar-menu ul{
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-menu li{
+    margin-bottom: .9rem;  
+}
+
+.sidebar-menu li a{
+    color: #efefef;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.sidebar-menu li a span{
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: .8rem;    
+}
+
+.sidebar-menu li:hover{
+    background: #0088a9; 
+    margin: 1rem 1.5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0088a9;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    left: 280px;
+    width: calc(100% - 280px);
+    top: 0;
+    z-index: 20;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: left 300ms;
+}
+
+.menu-toggle label  {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    border-radius: 90%;
+}
+
+.header-icons span{
+    display: inline-block;
+    margin-left: 0.7rem;
+    font-size: 1.4rem;
+}
+
+.header-icons span:hover{
+    color: #efefef;
+}
+
+.menu-toggle label:hover  {
+    background: #efefef;
+}
+
+main { 
+    padding: 1rem;
+    background: #efefef;
+    min-height: calc(100vh - 50px);
+    margin-top: 50px;
+}
+
+.page-header {
+    
+    display: flex;
+    justify-content: flex-end;
+ 
+}
+
+.header-actions button{
+    outline: none;
+    color: #efefef;
+    background: #0088a9;
+    border: none;
+    padding: .6rem 1rem;
+    margin-left: .5rem;
+    border-radius: 3px;
+    font-weight: 500;    
+}
+
+.header-actions button{
+    font-size: 1rem;
+    margin-right: .6rem;
+    
+}
+.header-actions button:hover{
+    background: #efefef;
+    color: #0088a9;
+    border:3px solid #0088a9;
+    font-weight: 600;
+}
+.header-actions span{
+    font-size: 1.2rem;
+}
+
+.brand-icons span:hover{
+    color: #0088a9;
+}
